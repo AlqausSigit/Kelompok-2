@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Display CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    section {
+      background: white;
+      padding: 20px;
+      margin-bottom: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #444;
+      margin-top: 0;
+    }
+
+    .example-box {
+      margin-top: 15px;
+    }
+
+    /* BLOCK */
+    .block-example {
+      display: block;
+      width: 200px;
+      height: 80px;
+      background-color: lightblue;
+      margin-bottom: 10px;
+    }
+
+    /* INLINE */
+    .inline-example {
+      display: inline;
+      background-color: lightgreen;
+      padding: 5px;
+    }
+
+    /* INLINE-BLOCK */
+    .inline-block-example {
+      display: inline-block;
+      width: 150px;
+      height: 80px;
+      background-color: salmon;
+      margin-right: 10px;
+    }
+
+    /* FLEX */
+    .flex-container {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+    }
+    .flex-item {
+      background-color: gold;
+      padding: 20px;
+      flex: 1;
+      text-align: center;
+    }
+
+    /* GRID */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 15px;
+    }
+    .grid-item {
+      background-color: lightcoral;
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      color: #888;
+      margin-top: 50px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Display CSS (block, inline, inline-block, flex,
+        grid)</h1>
+    <p>Menampilkan berbagai jenis properti <code>display</code> di CSS</p>
+  </header>
+
+  <section>
+    <h2>1. display: <code>block</code></h2>
+    <p>Elemen akan memenuhi lebar penuh dan mulai dari baris baru.</p>
+    <div class="example-box">
+      <div class="block-example">Block 1</div>
+      <div class="block-example">Block 2</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>2. display: <code>inline</code></h2>
+    <p>Elemen hanya selebar kontennya dan tidak bisa atur lebar/tinggi.</p>
+    <div class="example-box">
+      <span class="inline-example">Inline 1</span>
+      <span class="inline-example">Inline 2</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>3. display: <code>inline-block</code></h2>
+    <p>Seperti inline, tapi bisa atur lebar dan tinggi.</p>
+    <div class="example-box">
+      <div class="inline-block-example">Inline-Block 1</div>
+      <div class="inline-block-example">Inline-Block 2</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>4. display: <code>flex</code></h2>
+    <p>Menyusun elemen secara fleksibel secara horizontal atau vertikal.</p>
+    <div class="flex-container">
+      <div class="flex-item">Flex 1</div>
+      <div class="flex-item">Flex 2</div>
+      <div class="flex-item">Flex 3</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>5. display: <code>grid</code></h2>
+    <p>Membuat layout dalam bentuk baris dan kolom.</p>
+    <div class="grid-container">
+      <div class="grid-item">Grid 1</div>
+      <div class="grid-item">Grid 2</div>
+      <div class="grid-item">Grid 3</div>
+      <div class="grid-item">Grid 4</div>
+    </div>
+  </section>
+</body>
+</html>
