@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Box Model Sederhana</title>
+  <style>
+    .box {
+      width: 200px;
+      padding: 20px;
+      border: 5px solid green;
+      margin: 30px;
+      background-color: lightyellow;
+    }
+
+    
+    .button {
+    background-color: #4CAF50;      /* warna awal hijau */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;          /* hilangkan garis bawah */
+    display: inline-block;          /* biar padding berfungsi pada <a> */
+    }
+    .button:hover {
+    background-color: #0b550f;      /* hijau lebih gelap */
+  }
+
+
+  </style>
+</head>
+<body>
+  <h2>Contoh Box Model</h2>
+  <div class="box">
+    Ini adalah isi kotak (Content)
+  </div>
+  <p>
+    Kotak di atas punya:<br>
+    - Padding: 20px (jarak isi ke border)<br>
+    - Border: 5px (garis pinggir)<br>
+    - Margin: 30px (jarak ke luar)
+  </p>
+  <a href="display.html" class="button">Next</a>
+
+  
+</body>
+</html>

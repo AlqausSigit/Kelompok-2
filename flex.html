@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox Dasar</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    h1, h2 {
+      color: #007BFF;
+    }
+
+    p {
+      max-width: 800px;
+    }
+
+    .flex-container {
+      display: flex; /* Ini adalah dasar Flexbox */
+      background-color: #e0f7fa;
+      padding: 10px;
+      gap: 10px; /* Jarak antar item */
+    }
+
+    .box {
+      background-color: #4fc3f7;
+      color: white;
+      padding: 20px;
+      font-size: 16px;
+      text-align: center;
+      flex: 1; /* Membuat item fleksibel dan membagi ruang secara merata */
+    }
+
+    .flex-column {
+      display: flex;
+      flex-direction: column; /* Mengubah arah flex menjadi vertikal */
+      gap: 10px;
+      background-color: #e8f5e9;
+      padding: 10px;
+      margin-top: 30px;
+    }
+
+    .box2 {
+      background-color: #66bb6a;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .button {
+    background-color: #4CAF50;      /* warna awal hijau */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;          /* hilangkan garis bawah */
+    display: inline-block;          /* biar padding berfungsi pada <a> */
+    }
+    .button:hover {
+    background-color: #0b550f;      /* hijau lebih gelap */
+   }
+  </style>
+</head>
+<body>
+
+  <h1>Dasar Flexbox di CSS</h1>
+  <p><strong>Flexbox</strong> (Flexible Box Layout) adalah sistem layout satu dimensi yang memungkinkan penataan elemen secara fleksibel dan responsif baik secara horizontal (baris) maupun vertikal (kolom).</p>
+
+  <h2>1. Flexbox Arah Baris (default)</h2>
+  <p>Container menggunakan <code>display: flex;</code> dan setiap item akan ditata secara horizontal (sejajar ke samping). Properti <code>flex: 1</code> membuat semua item membagi ruang secara merata.</p>
+  
+  <div class="flex-container">
+    <div class="box">Item 1</div>
+    <div class="box">Item 2</div>
+    <div class="box">Item 3</div>
+  </div>
+
+  <h2>2. Flexbox Arah Kolom</h2>
+  <p>Dengan menambahkan <code>flex-direction: column;</code>, maka item disusun secara vertikal.</p>
+  
+  <div class="flex-column">
+    <div class="box2">Item A</div>
+    <div class="box2">Item B</div>
+    <div class="box2">Item C</div>
+  </div>
+  <br>
+  <br>
+  
+  <a href="float.html" class="button">Previous</a>
+</body>
+</html>

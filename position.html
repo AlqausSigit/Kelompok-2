@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contoh Position CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-top: 60px;
+      color: #000000;
+    }
+
+    .kotak {
+      width: 150px;
+      height: 100px;
+      padding: 10px;
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .static {
+      background: #707070;
+      position: static;
+    }
+
+    .relative {
+      background: #ff00bb;
+      position: relative;
+      left: 30px;
+    }
+
+
+   
+
+
+    .absolute-container {
+      position: relative;
+      height: 150px;
+      background: #030000;
+      margin-bottom: 50px;
+    }
+
+    .absolute {
+      background: #910c0a;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    .fixed {
+      background: #42a5f5;
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      z-index: 999;
+    }
+
+    .sticky-container {
+      margin-top: 100px;
+      height: 1200px;
+    }
+
+    .sticky {
+      background: #66bb6a;
+      position: sticky;
+      top: 0;
+    }
+
+    .penjelasan {
+      font-size: 0.9rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+
+    .button {
+    background-color: #4CAF50;      /* warna awal hijau */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;          /* hilangkan garis bawah */
+    display: inline-block;          /* biar padding berfungsi pada <a> */
+}
+
+  .button:hover {
+    background-color: #0b550f;      /* hijau lebih gelap */
+  }
+  </style>
+</head>
+<body>
+
+  <h2>1. Position: static (default)</h2>
+  <div class="penjelasan">Default posisi elemen. Elemen akan ditampilkan mengikuti alur normal dokumen (tanpa bisa digeser dengan top, left, dll).</div>
+  <div class="kotak static">STATIC</div>
+
+  <h2>2. Position: relative</h2>
+  <div class="penjelasan">Tetap di tempat aslinya, tapi bisa digeser. Contoh: geser 30px ke kanan (left: 30px)</div>
+  <div class="kotak relative">RELATIVE</div>
+
+  <h2>3. Position: absolute</h2>
+  <div class="penjelasan">Posisi diatur relatif terhadap parent yang "relative". yang berwarna hitam disekitar kotak absolute yang berbentuk memanjang dinamakan dengan absolute container.</div>
+  <div class="absolute-container">
+    <div class="kotak absolute">ABSOLUTE</div>
+  </div>
+
+  <h2>4. Position: fixed</h2>
+  <div class="penjelasan">Selalu menempel di layar (pojok kanan bawah), walau discroll.</div>
+  <div class="kotak fixed">FIXED</div>
+
+  <h2>5. Position: sticky</h2>
+  <div class="penjelasan">Awalnya biasa, tapi akan "menempel di atas" saat scroll sampai posisinya.</div>
+  <div class="sticky-container">
+    <div class="kotak sticky">STICKY</div>
+    <p>Scroll ke bawah untuk melihat efek sticky...</p>
+    <p>...</p>
+    <p>...</p>
+    <p>...</p>
+    <p>...</p>
+    <p>...</p>
+    <p>...</p>
+    <p>...</p>
+    <p>...</p>
+    <p>...</p>
+    <p>...</p>
+    <p>...</p>
+    <p>...</p>
+    <p>"titik titik diatas saya gunakan untuk melihat efek sticky pada kotak dengan lebih jelas"</p>
+  </div>
+  <a href="float.html" class="button">Next</a>
+
+  <a href="display.html" class="button">Previous</a>
+
+</body>
+</html>
+
+<!-- sekkkkkkkkkkkkkkkkkkkkk -->

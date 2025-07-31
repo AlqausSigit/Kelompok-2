@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo Float dan Clear</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    h1, h2 {
+      color: #007BFF;
+    }
+
+    .box {
+      width: 200px;
+      padding: 15px;
+      margin: 10px;
+      background-color: #cce5ff;
+      border: 2px solid #333;
+    }
+
+    /* FLOAT LEFT dan RIGHT */
+    .float-left {
+      float: left;
+    }
+
+    .float-right {
+      float: right;
+    }
+
+    /* CLEAR */
+    .clearfix::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .clear-both {
+      clear: both;
+    }
+
+    .section {
+      margin-bottom: 60px;
+    }
+
+    .content {
+      background-color: #f0f0f0;
+      padding: 10px;
+      overflow: hidden;
+    }
+
+    p {
+      max-width: 800px;
+    }
+
+    .button {
+    background-color: #4CAF50;      /* warna awal hijau */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .button:hover {
+    background-color: #0b550f;      /* hijau lebih gelap */
+  }
+  </style>
+</head>
+<body>
+
+  <h1>Demo: CSS Float dan Clear</h1>
+  <p>Properti <code>float</code> digunakan untuk mengapungkan elemen ke kiri atau kanan, sedangkan <code>clear</code> digunakan untuk menghindari elemen agar tidak naik ke samping elemen yang di-float.</p>
+
+  <!-- FLOAT -->
+  <div class="section">
+    <h2>1. Float: left dan right</h2>
+    <p><strong>Kegunaan:</strong> Mengatur posisi elemen ke kiri atau kanan, sering digunakan untuk membuat kolom, image wrapping, atau tata letak halaman.</p>
+
+    <div class="content">
+      <div class="box float-left">Float Left</div>
+      <div class="box float-right">Float Right</div>
+      <p>Paragraf ini akan mengalir di antara dua kotak yang di-float ke kiri dan ke kanan. Jika tidak dibatasi, konten selanjutnya bisa "naik" ke samping elemen float.</p>
+    </div>
+  </div>
+
+  <!-- CLEAR -->
+  <div class="section">
+    <h2>2. Clear: both</h2>
+    <p><strong>Kegunaan:</strong> <code>clear</code> digunakan untuk mencegah elemen naik ke samping elemen yang di-float. Bisa di-set ke <code>left</code>, <code>right</code>, atau <code>both</code>.</p>
+
+    <div class="content">
+      <div class="box float-left">Float Left</div>
+      <div class="box float-right">Float Right</div>
+      <div class="clear-both"></div> <!-- Menghentikan efek float -->
+      <p>Paragraf ini muncul <strong>setelah</strong> elemen-elemen float, karena ada <code>clear: both</code>. Tanpa clear, paragraf ini bisa "naik" dan tertimpa elemen float.</p>
+    </div>
+  </div>
+
+  <!-- CLEARFIX -->
+  <div class="section">
+    <h2>3. Clear dengan Clearfix</h2>
+    <p><strong>Clearfix</strong> adalah teknik umum untuk membersihkan float tanpa menambahkan elemen kosong seperti <code>&lt;div class="clear"&gt;</code>.</p>
+
+    <div class="content clearfix">
+      <div class="box float-left">Float Left</div>
+      <div class="box float-right">Float Right</div>
+      <p>Karena parent div menggunakan teknik <code>::after</code> clearfix, maka paragraf ini tetap muncul di bawah float tanpa tambahan div clear.</p>
+    </div>
+  </div>
+
+
+  <a href="flex.html" class="button">Next</a>
+  <a href="position.html" class="button">Previous</a>
+
+</body>
+</html>

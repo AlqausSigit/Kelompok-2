@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo Properti Display (block, inline, inline-block, flex, grid)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    h2 {
+      color: #007bff;
+      margin-top: 40px;
+    }
+
+    p {
+      max-width: 800px;
+    }
+
+    .box {
+      padding: 10px;
+      margin: 5px;
+      border: 2px solid #333;
+      background-color: #cce5ff;
+    }
+
+    /* BLOCK */
+    .block-container div {
+      display: block;
+    }
+
+    /* INLINE */
+    .inline-container span {
+      display: inline;
+    }
+
+    /* INLINE-BLOCK */
+    .inline-block-container div {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+    }
+
+    /* FLEX */
+    .flex-container {
+      display: flex;
+      gap: 10px;
+    }
+
+    /* GRID */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .section {
+      margin-bottom: 50px;
+    }
+
+    code {
+      background-color: #eee;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    .button {
+    background-color: #4CAF50;      /* warna awal hijau */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;          /* hilangkan garis bawah */
+    display: inline-block;          /* biar padding berfungsi pada <a> */
+}
+
+  </style>
+</head>
+<body>
+
+  <h1>Demo: CSS Display Property</h1>
+  <p>Properti <code>display</code> di CSS digunakan untuk menentukan bagaimana elemen HTML ditampilkan dalam layout. Di bawah ini adalah contoh penggunaan berbagai jenis <code>display</code> beserta penjelasannya.</p>
+
+  <!-- BLOCK -->
+  <div class="section">
+    <h2>1. Display: Block</h2>
+    <p><strong>Kegunaan:</strong> Elemen <code>block</code> menempati seluruh lebar kontainer dan selalu mulai dari baris baru.</p>
+    <p><strong>Contoh elemen block:</strong> &lt;div&gt;, &lt;p&gt;, &lt;h1&gt; sampai &lt;h6&gt;</p>
+    <div class="block-container">
+      <div class="box">Block 1</div>
+      <div class="box">Block 2</div>
+      <div class="box">Block 3</div>
+    </div>
+  </div>
+
+  <!-- INLINE -->
+  <div class="section">
+    <h2>2. Display: Inline</h2>
+    <p><strong>Kegunaan:</strong> Elemen <code>inline</code> hanya selebar kontennya dan tidak mulai dari baris baru. Tidak bisa mengatur <code>width</code> dan <code>height</code>.</p>
+    <p><strong>Contoh elemen inline:</strong> &lt;span&gt;, &lt;a&gt;, &lt;strong&gt;, &lt;em&gt;</p>
+    <div class="inline-container">
+      <span class="box">Inline 1</span>
+      <span class="box">Inline 2</span>
+      <span class="box">Inline 3</span>
+    </div>
+  </div>
+
+  <!-- INLINE-BLOCK -->
+  <div class="section">
+    <h2>3. Display: Inline-block</h2>
+    <p><strong>Kegunaan:</strong> Seperti <code>inline</code> karena bisa sejajar horizontal, tetapi juga seperti <code>block</code> karena bisa diatur ukuran.</p>
+    <div class="inline-block-container">
+      <div class="box">Inline-Block 1</div>
+      <div class="box">Inline-Block 2</div>
+      <div class="box">Inline-Block 3</div>
+    </div>
+  </div>
+
+  <!-- FLEX -->
+  <div class="section">
+    <h2>4. Display: Flex</h2>
+    <p><strong>Kegunaan:</strong> Flexbox digunakan untuk membuat layout yang fleksibel dan responsif. Elemen anak bisa diatur arah (horizontal/vertikal), diratakan, diberi jarak otomatis, dll.</p>
+    <p><strong>Cocok untuk:</strong> Navbar, layout kolom, dan penataan baris fleksibel.</p>
+    <div class="flex-container">
+      <div class="box">Flex 1</div>
+      <div class="box">Flex 2</div>
+      <div class="box">Flex 3</div>
+    </div>
+  </div>
+
+  <!-- GRID -->
+  <div class="section">
+    <h2>5. Display: Grid</h2>
+    <p><strong>Kegunaan:</strong> CSS Grid Layout memungkinkan penataan elemen dalam baris dan kolom. Ideal untuk layout dua dimensi.</p>
+    <p><strong>Cocok untuk:</strong> Galeri, dashboard, halaman majalah.</p>
+    <div class="grid-container">
+      <div class="box">Grid 1</div>
+      <div class="box">Grid 2</div>
+      <div class="box">Grid 3</div>
+      <div class="box">Grid 4</div>
+      <div class="box">Grid 5</div>
+      <div class="box">Grid 6</div>
+    </div>
+  </div>
+<br>
+<a href="position.html" class="button">Next</a>
+<a href="boxmodel.html" class="button">Previous</a>
+</body>
+</html>
